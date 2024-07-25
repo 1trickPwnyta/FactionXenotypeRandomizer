@@ -7,7 +7,7 @@
 		<li>1.5</li>
 	</supportedVersions>
 	<description>
-
+Adds new mutant faction types similar to the Biotech faction types such as "Rough pig union", but these new faction types each generate a random xenotype for every playthrough.
 	</description>
 	<url>https://github.com/1trickPwnyta/FactionXenotypeRandomizer</url>
 	<modDependencies>
@@ -16,6 +16,12 @@
 			<displayName>Harmony</displayName>
 			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
 			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+		</li>
+		<li>
+			<packageId>xenotyperandomizer.1trickPwnyta</packageId>
+			<displayName>Xenotype Randomizer</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2882704875</steamWorkshopUrl>
+			<downloadUrl>https://github.com/1trickPwnyta/XenotypeRandomizer</downloadUrl>
 		</li>
 	</modDependencies>
 </ModMetaData>

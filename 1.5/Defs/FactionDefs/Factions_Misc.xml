@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef ParentName="OutlanderFactionBase">
+    <defName>OutlanderCivilMutant</defName>
+    <label>civil mutant union</label>
+	<description>A union of civil mutants. Their genetics are randomized at game start.</description>
+    <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+	<colorSpectrum>
+      <li>(0.35, 0.30, 0.60)</li>
+      <li>(0.45, 0.40, 0.90)</li>
+    </colorSpectrum>
+	<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>15</configurationListOrderPriority>
+	<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+	<categoryTag>Mutants</categoryTag>
+  </FactionDef>
+  
+  <FactionDef ParentName="TribeBase">
+    <defName>TribeCivilMutant</defName>
+    <label>gentle mutant tribe</label>
+	<description>A tribe of gentle mutants. Their genetics are randomized at game start.</description>
+    <factionIconPath>World/WorldObjects/Expanding/Village</factionIconPath>
+	<colorSpectrum>
+      <li>(0.85, 0.75, 0.37)</li>
+      <li>(0.94, 0.61, 0.06)</li>
+    </colorSpectrum>
+	<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>35</configurationListOrderPriority>
+	<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+	<categoryTag>Mutants</categoryTag>
+  </FactionDef>
+
+  <FactionDef ParentName="TribeRoughBase">
+    <defName>TribeRoughMutant</defName>
+    <label>fierce mutant tribe</label>
+	<description>A tribe of rough mutants. Their genetics are randomized at game start.</description>
+    <factionIconPath>World/WorldObjects/Expanding/VillageRough</factionIconPath>
+    <replacesFaction>TribeRoughNeanderthal</replacesFaction>
+	<categoryTag>Mutants</categoryTag>
+  </FactionDef>
+  
+  <FactionDef ParentName="PirateBandBase">
+    <defName>PirateMutant</defName>
+    <label>mutant pirates</label>
+	<description>A band of pirate mutants. Their genetics are randomized at game start.</description>
+    <factionIconPath>World/WorldObjects/Expanding/PirateOutpost</factionIconPath>
+    <replacesFaction>PirateWaster</replacesFaction>
+	<categoryTag>Mutants</categoryTag>
+  </FactionDef>
+  
+  <FactionDef ParentName="TribeSavageBase">
+    <defName>TribeSavageMutant</defName>
+    <label>savage mutant tribe</label>
+	<description>A tribe of savage mutants. Their genetics are randomized at game start.</description>
+    <factionIconPath>World/WorldObjects/Expanding/VillageSavage</factionIconPath>
+    <replacesFaction>TribeSavageImpid</replacesFaction>
+	<categoryTag>Mutants</categoryTag>
+  </FactionDef>
+  
+  <FactionDef ParentName="OutlanderRoughBase">
+    <defName>OutlanderRoughMutant</defName>
+    <label>rough mutant union</label>
+	<description>A union of rough mutants. Their genetics are randomized at game start.</description>
+    <factionIconPath>World/WorldObjects/Expanding/TownRough</factionIconPath>
+    <replacesFaction>OutlanderRoughPig</replacesFaction>
+	<categoryTag>Mutants</categoryTag>
+  </FactionDef>
+	
+</Defs>
