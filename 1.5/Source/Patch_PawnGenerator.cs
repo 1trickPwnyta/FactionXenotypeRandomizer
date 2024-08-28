@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using RimWorld;
 using Verse;
 
 namespace FactionXenotypeRandomizer
@@ -11,6 +12,10 @@ namespace FactionXenotypeRandomizer
         {
             if (request.Faction != null && request.Faction.def.categoryTag == "Mutants")
             {
+                if (!FactionXenotypeRandomizerSettings.AllowMixedXenotypes)
+                {
+                    request.ForcedXenotype = XenotypeDefOf.Baseliner;
+                }
                 request.ForcedCustomXenotype = FactionXenotypeRandomizer.Current.factionXenotypes[request.Faction];
             }
         }

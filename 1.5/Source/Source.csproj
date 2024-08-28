@@ -47,14 +47,19 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="XenotypeRandomizer">
-      <HintPath>..\..\..\..\Stable\XenotypeRandomizer\1.5\Assemblies\XenotypeRandomizer.dll</HintPath>
+      <HintPath>..\..\..\..\Published\XenotypeRandomizer\1.5\Assemblies\XenotypeRandomizer.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Debug.cs" />
     <Compile Include="FactionXenotypeRandomizer.cs" />
+    <Compile Include="FactionXenotypeRandomizerSettings.cs" />
     <Compile Include="Patch_FactionDef.cs" />
     <Compile Include="Patch_FactionGenerator.cs" />
     <Compile Include="Patch_PawnGenerator.cs" />

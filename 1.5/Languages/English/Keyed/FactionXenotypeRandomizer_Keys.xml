@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<FactionXenotypeRandomizer_AllowMixedXenotypes>Allow mixed xenotypes</FactionXenotypeRandomizer_AllowMixedXenotypes>
+	<FactionXenotypeRandomizer_AllowMixedXenotypesDesc>Whether to allow mutant faction members to occasionally generate with their mutant xenotype mixed with another standard xenotype.</FactionXenotypeRandomizer_AllowMixedXenotypesDesc>
+</LanguageData>
