@@ -8,6 +8,9 @@
 	</supportedVersions>
 	<description>
 Adds new mutant faction types similar to the Biotech faction types such as "Rough pig union", but these new faction types each generate a random xenotype for every playthrough.
+
+=== Credits ===
+Mod icon: twitter.com/mouse_draws
 	</description>
 	<url>https://github.com/1trickPwnyta/FactionXenotypeRandomizer</url>
 	<modDependencies>
