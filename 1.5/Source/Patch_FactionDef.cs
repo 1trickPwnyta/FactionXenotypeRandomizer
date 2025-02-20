@@ -9,7 +9,7 @@ namespace FactionXenotypeRandomizer
     {
         public static void Prefix(FactionDef __instance, ref string ___cachedDescription)
         {
-            if (__instance.categoryTag == "Mutants" && ___cachedDescription == null)
+            if (__instance.IsMutant() && ___cachedDescription == null)
             {
                 ___cachedDescription = __instance.description;
             }

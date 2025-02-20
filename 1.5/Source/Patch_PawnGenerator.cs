@@ -10,7 +10,7 @@ namespace FactionXenotypeRandomizer
     {
         public static void Prefix(ref PawnGenerationRequest request)
         {
-            if (request.Faction != null && request.Faction.def.categoryTag == "Mutants")
+            if (request.Faction != null && request.Faction.def.IsMutant())
             {
                 if (!FactionXenotypeRandomizerSettings.AllowMixedXenotypes)
                 {

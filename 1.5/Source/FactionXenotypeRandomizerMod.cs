@@ -1,4 +1,7 @@
 using HarmonyLib;
+using RimWorld.Planet;
+using System;
+using System.Reflection;
 using UnityEngine;
 using Verse;
 
@@ -17,6 +20,12 @@ namespace FactionXenotypeRandomizer
 
             var harmony = new Harmony(PACKAGE_ID);
             harmony.PatchAll();
+            Type quickstartControllerType = AccessTools.TypeByName("HugsLib.Quickstart.QuickstartController");
+            if (quickstartControllerType != null)
+            {
+                harmony.Patch(quickstartControllerType.Method("ApplyQuickstartConfiguration"), typeof(CompatibilityPatch_HugsLib_QuickstartController).Method(nameof(CompatibilityPatch_HugsLib_QuickstartController.Prefix)));
+            }
+            harmony.Patch(typeof(WorldFactionsUIUtility).GetNestedType("<>c__DisplayClass8_2", BindingFlags.NonPublic).Method("<DoWindowContents>b__4"), null, typeof(Patch_WorldFactionsUIUtility_DoWindowContents_b__4).Method(nameof(Patch_WorldFactionsUIUtility_DoWindowContents_b__4.Postfix)));
 
             Log.Message($"[{PACKAGE_NAME}] Loaded.");
         }
