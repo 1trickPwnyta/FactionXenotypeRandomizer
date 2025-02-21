@@ -6,7 +6,8 @@ namespace FactionXenotypeRandomizer
 {
     public static class Utility
     {
-        public static Faction lastFaction = null;
+        private static Dictionary<PawnGenOptionWithXenotype, CustomXenotype> pawnGenOptionCustomXenotypes = new Dictionary<PawnGenOptionWithXenotype, CustomXenotype>();
+        public static FactionDef lastFactionDef;
 
         public static bool IsMutant(this FactionDef def)
         {
@@ -15,31 +16,30 @@ namespace FactionXenotypeRandomizer
 
         public static float GetCombatPowerFactor(this CustomXenotype xenotype)
         {
-            float factor = xenotype.genes.Select(g => g.GetModExtension<GeneDefModExtension>()?.combatPowerFactor ?? 1f).Aggregate((x, y) => x * y);
-            Debug.Log(xenotype.name + ": " + factor);
-            return factor;
+            return xenotype?.genes.Select(g => g.GetModExtension<GeneDefModExtension>()?.combatPowerFactor ?? 1f).Aggregate((x, y) => x * y) ?? 1f;
         }
 
-        public static CustomXenotype GetCustomXenotype(this Faction faction)
+        public static CustomXenotype GetCustomXenotype(this FactionDef def)
         {
-            Dictionary<Faction, CustomXenotype> dict = FactionXenotypeRandomizer.Current.factionXenotypes;
-            return dict.ContainsKey(faction) ? dict[faction] : null;
+            return (def as CustomFactionDef)?.customXenotype;
         }
 
         public static CustomXenotype GetCustomXenotype(this PawnGenOptionWithXenotype option)
         {
-            Dictionary<PawnGenOptionWithXenotype, CustomXenotype> dict = FactionXenotypeRandomizer.Current.pawnGenOptionCustomXenotypes;
-            return dict.ContainsKey(option) ? dict[option] : null;
+            return pawnGenOptionCustomXenotypes.ContainsKey(option) ? pawnGenOptionCustomXenotypes[option] : null;
         }
 
         public static void SetCustomXenotype(this Faction faction, CustomXenotype xenotype)
         {
-            FactionXenotypeRandomizer.Current.factionXenotypes[faction] = xenotype;
+            faction.def = new CustomFactionDef(faction.def)
+            {
+                customXenotype = xenotype
+            };
         }
 
         public static void SetCustomXenotype(this PawnGenOptionWithXenotype option, CustomXenotype xenotype)
         {
-            FactionXenotypeRandomizer.Current.pawnGenOptionCustomXenotypes[option] = xenotype;
+            pawnGenOptionCustomXenotypes[option] = xenotype;
         }
     }
 }

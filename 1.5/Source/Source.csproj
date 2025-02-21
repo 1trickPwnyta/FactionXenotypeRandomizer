@@ -58,11 +58,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompatibilityPatch_HugsLib_QuickstartController.cs" />
+    <Compile Include="CustomFactionDef.cs" />
     <Compile Include="CustomFactionXenotypes.cs" />
     <Compile Include="Debug.cs" />
-    <Compile Include="FactionXenotypeRandomizer.cs" />
     <Compile Include="FactionXenotypeRandomizerSettings.cs" />
     <Compile Include="GeneDefModExtension.cs" />
+    <Compile Include="Patch_Faction.cs" />
     <Compile Include="Patch_FactionDef.cs" />
     <Compile Include="Patch_FactionGenerator.cs" />
     <Compile Include="Patch_Page.cs" />
