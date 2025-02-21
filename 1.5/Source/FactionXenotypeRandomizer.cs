@@ -15,10 +15,11 @@ namespace FactionXenotypeRandomizer
         }
         
         public Dictionary<Faction, CustomXenotype> factionXenotypes = new Dictionary<Faction, CustomXenotype>();
+        public Dictionary<PawnGenOptionWithXenotype, CustomXenotype> pawnGenOptionCustomXenotypes = new Dictionary<PawnGenOptionWithXenotype, CustomXenotype>();
         private List<Faction> workingFactionList;
         private List<CustomXenotype> workingCustomXenotypeList;
 
-        public FactionXenotypeRandomizer(Game game)
+        public FactionXenotypeRandomizer(Game _)
         {
 
         }

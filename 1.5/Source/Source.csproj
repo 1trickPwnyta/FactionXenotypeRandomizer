@@ -62,12 +62,15 @@
     <Compile Include="Debug.cs" />
     <Compile Include="FactionXenotypeRandomizer.cs" />
     <Compile Include="FactionXenotypeRandomizerSettings.cs" />
+    <Compile Include="GeneDefModExtension.cs" />
     <Compile Include="Patch_FactionDef.cs" />
     <Compile Include="Patch_FactionGenerator.cs" />
     <Compile Include="Patch_Page.cs" />
     <Compile Include="Patch_PageUtility.cs" />
     <Compile Include="Patch_Page_CreateWorldParams.cs" />
     <Compile Include="Patch_PawnGenerator.cs" />
+    <Compile Include="Patch_PawnGenOptionWithXenotype.cs" />
+    <Compile Include="Patch_PawnGroupMakerUtility.cs" />
     <Compile Include="Patch_Root_Play.cs" />
     <Compile Include="Patch_WorldFactionsUIUtility.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

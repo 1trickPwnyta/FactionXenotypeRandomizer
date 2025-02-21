@@ -25,7 +25,7 @@ namespace FactionXenotypeRandomizer
                         XenotypeRandomizer.XenotypeRandomizer.Randomize(xenotype.genes, ref xenotype.iconDef, false);
                         xenotype.name = GeneUtility.GenerateXenotypeNameFromGenes(xenotype.genes);
                     }
-                    FactionXenotypeRandomizer.Current.factionXenotypes[faction] = xenotype;
+                    faction.SetCustomXenotype(xenotype);
                 }
             }
         }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="Hands_Pig"]</xpath>
+		<value>
+			<li Class="FactionXenotypeRandomizer.GeneDefModExtension">
+				<combatPowerFactor>0.97</combatPowerFactor>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="ElongatedFingers"]</xpath>
+		<value>
+			<li Class="FactionXenotypeRandomizer.GeneDefModExtension">
+				<combatPowerFactor>1.03</combatPowerFactor>
+			</li>
+		</value>
+	</Operation>
+</Patch>
