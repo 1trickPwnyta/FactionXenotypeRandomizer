@@ -61,6 +61,7 @@
     <Compile Include="CustomFactionDef.cs" />
     <Compile Include="CustomFactionXenotypes.cs" />
     <Compile Include="Debug.cs" />
+    <Compile Include="FactionXenotypeRandomizerInitializer.cs" />
     <Compile Include="FactionXenotypeRandomizerSettings.cs" />
     <Compile Include="GeneDefModExtension.cs" />
     <Compile Include="Patch_Faction.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Patch_Page.cs" />
     <Compile Include="Patch_PageUtility.cs" />
     <Compile Include="Patch_Page_CreateWorldParams.cs" />
+    <Compile Include="Patch_PawnApparelGenerator.cs" />
     <Compile Include="Patch_PawnGenerator.cs" />
     <Compile Include="Patch_PawnGenOptionWithXenotype.cs" />
     <Compile Include="Patch_PawnGroupMakerUtility.cs" />
