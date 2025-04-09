@@ -9,9 +9,12 @@ namespace FactionXenotypeRandomizer
     [HarmonyPatch("ResetFactionCounts")]
     public static class Patch_Page_CreateWorldParams
     {
-        public static void Postfix(Page_CreateWorldParams __instance)
+        public static void Postfix(ref List<FactionDef> ___factions, List<FactionDef> ___initialFactions)
         {
-            CustomFactionXenotypes.Initialize((typeof(Page_CreateWorldParams).Field("factions").GetValue(__instance) as List<FactionDef>).Where(f => f.displayInFactionSelection).Count());
+            CustomFactionXenotypes.Initialize();
+            ___factions = ___factions.Select(f => Utility.GetPossibleCustomFactionDef(f)).ToList();
+            ___initialFactions.Clear();
+            ___initialFactions.AddRange(___factions);
         }
     }
 }

@@ -35,5 +35,9 @@ namespace FactionXenotypeRandomizer
                 PostLoad();
             }
         }
+
+        public override bool Equals(object obj) => base.Equals(obj) || obj == parent;
+
+        public override int GetHashCode() => parent.GetHashCode();
     }
 }

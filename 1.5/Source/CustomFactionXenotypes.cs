@@ -1,14 +1,27 @@
-﻿using HarmonyLib;
-using RimWorld;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-
-namespace FactionXenotypeRandomizer
+﻿namespace FactionXenotypeRandomizer
 {
     public static class CustomFactionXenotypes
     {
-        private static List<CustomXenotype> xenotypes;
+        private static bool initialized = false;
+
+        public static void Initialize()
+        {
+            initialized = true;
+        }
+
+        public static void Uninitialize()
+        {
+            initialized = false;
+        }
+
+        // For compatibility with mods that use the factions UI outside of new colony creation, only show these 
+        // options when initialized
+        public static bool ShouldShow()
+        {
+            return initialized;
+        }
+
+        /*private static List<CustomXenotype> xenotypes;
 
         public static int CurrentIndex { get; private set; } = 0;
 
@@ -66,6 +79,6 @@ namespace FactionXenotypeRandomizer
         public static bool ShouldShow()
         {
             return xenotypes != null;
-        }
+        }*/
     }
 }

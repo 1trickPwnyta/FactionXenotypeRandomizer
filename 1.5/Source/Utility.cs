@@ -19,6 +19,11 @@ namespace FactionXenotypeRandomizer
             return xenotype?.genes.Select(g => g.GetModExtension<GeneDefModExtension>()?.combatPowerFactor ?? 1f).Aggregate((x, y) => x * y) ?? 1f;
         }
 
+        public static FactionDef GetPossibleCustomFactionDef(FactionDef def)
+        {
+            return def.displayInFactionSelection ? new CustomFactionDef(def) : def;
+        }
+
         public static CustomXenotype GetCustomXenotype(this FactionDef def)
         {
             return (def as CustomFactionDef)?.customXenotype;
