@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="ViolenceDisabled"]</xpath>
+		<value>
+			<li Class="FactionXenotypeRandomizer.GeneDefModExtension">
+				<combatPowerFactor>0.7</combatPowerFactor>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="Nearsighted"]</xpath>
+		<value>
+			<li Class="FactionXenotypeRandomizer.GeneDefModExtension">
+				<combatPowerFactor>0.95</combatPowerFactor>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="DarkVision"]</xpath>
+		<value>
+			<li Class="FactionXenotypeRandomizer.GeneDefModExtension">
+				<combatPowerFactor>1.01</combatPowerFactor>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="FireResistant"]</xpath>
+		<value>
+			<li Class="FactionXenotypeRandomizer.GeneDefModExtension">
+				<combatPowerFactor>1.03</combatPowerFactor>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="PollutionRush"]</xpath>
+		<value>
+			<li Class="FactionXenotypeRandomizer.GeneDefModExtension">
+				<combatPowerFactor>1.05</combatPowerFactor>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="Unstoppable"]</xpath>
+		<value>
+			<li Class="FactionXenotypeRandomizer.GeneDefModExtension">
+				<combatPowerFactor>1.1</combatPowerFactor>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="NakedSpeed"]</xpath>
+		<value>
+			<li Class="FactionXenotypeRandomizer.GeneDefModExtension">
+				<combatPowerFactor>0.8</combatPowerFactor>
+			</li>
+		</value>
+	</Operation>
+</Patch>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{51AB4547-104E-4BDF-99E1-159DDB329E1D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FactionXenotypeRandomizer</RootNamespace>
+    <AssemblyName>FactionXenotypeRandomizer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="1.6">
+      <HintPath>..\..\..\..\..\RimWorld\RimWorld Code 1.6\1.6.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="XenotypeRandomizer">
+      <HintPath>..\..\..\..\Published\XenotypeRandomizer\1.5\Assemblies\XenotypeRandomizer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CompatibilityPatch_HugsLib_QuickstartController.cs" />
+    <Compile Include="CustomFactionDef.cs" />
+    <Compile Include="CustomFactionXenotypes.cs" />
+    <Compile Include="Debug.cs" />
+    <Compile Include="FactionXenotypeRandomizerInitializer.cs" />
+    <Compile Include="FactionXenotypeRandomizerSettings.cs" />
+    <Compile Include="GeneDefModExtension.cs" />
+    <Compile Include="Patch_Faction.cs" />
+    <Compile Include="Patch_FactionDef.cs" />
+    <Compile Include="Patch_FactionGenerator.cs" />
+    <Compile Include="Patch_Page.cs" />
+    <Compile Include="Patch_PageUtility.cs" />
+    <Compile Include="Patch_Page_CreateWorldParams.cs" />
+    <Compile Include="Patch_PawnApparelGenerator.cs" />
+    <Compile Include="Patch_PawnGenerator.cs" />
+    <Compile Include="Patch_PawnGenOptionWithXenotype.cs" />
+    <Compile Include="Patch_PawnGroupMakerUtility.cs" />
+    <Compile Include="Patch_Root_Play.cs" />
+    <Compile Include="Patch_WorldFactionsUIUtility.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FactionXenotypeRandomizerMod.cs" />
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>powershell -ExecutionPolicy Bypass ..\..\Deploy.ps1</PostBuildEvent>
+  </PropertyGroup>
+</Project>

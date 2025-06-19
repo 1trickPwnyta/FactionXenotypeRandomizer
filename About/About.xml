@@ -3,11 +3,18 @@
 	<name>Faction Xenotype Randomizer</name>
 	<author>1trickPwnyta</author>
 	<packageId>factionxenotyperandomizer.1trickPwnyta</packageId>
+	<modVersion>1.1.0</modVersion>
 	<supportedVersions>
 		<li>1.5</li>
+		<li>1.6</li>
 	</supportedVersions>
 	<description>
 Adds new mutant faction types similar to the Biotech faction types such as "Rough pig union", but these new faction types each generate a random xenotype for every playthrough.
+
+You can now also use your custom xenotypes as the xenotype for a mutant faction! Click the dice icon next to a mutant faction on the world settings screen to do so.
+
+=== Updates ===
+06/18/2025: Update to 1.6, add ability to set custom xenotype as mutant faction xenotype instead of randomly generated xenotype
 
 === Credits ===
 Mod icon: twitter.com/mouse_draws
