@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="WoundHealing_Slow"]</xpath>
+		<value>
+			<li Class="FactionXenotypeRandomizer.GeneDefModExtension">
+				<combatPowerFactor>0.99</combatPowerFactor>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="WoundHealing_Fast"]</xpath>
+		<value>
+			<li Class="FactionXenotypeRandomizer.GeneDefModExtension">
+				<combatPowerFactor>1.01</combatPowerFactor>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="WoundHealing_SuperFast"]</xpath>
+		<value>
+			<li Class="FactionXenotypeRandomizer.GeneDefModExtension">
+				<combatPowerFactor>1.01</combatPowerFactor>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="ToxicEnvironmentResistance_Partial"]</xpath>
+		<value>
+			<li Class="FactionXenotypeRandomizer.GeneDefModExtension">
+				<combatPowerFactor>1.01</combatPowerFactor>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="ToxicEnvironmentResistance_Total"]</xpath>
+		<value>
+			<li Class="FactionXenotypeRandomizer.GeneDefModExtension">
+				<combatPowerFactor>1.02</combatPowerFactor>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="Superclotting"]</xpath>
+		<value>
+			<li Class="FactionXenotypeRandomizer.GeneDefModExtension">
+				<combatPowerFactor>1.01</combatPowerFactor>
+			</li>
+		</value>
+	</Operation>
+</Patch>

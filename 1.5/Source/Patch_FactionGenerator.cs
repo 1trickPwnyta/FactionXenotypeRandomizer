@@ -1,7 +1,6 @@
 ﻿using HarmonyLib;
 using RimWorld;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
 using Verse;
@@ -14,30 +13,17 @@ namespace FactionXenotypeRandomizer
         {
             if (!faction.IsPlayer && faction.def.displayInFactionSelection)
             {
-                CustomXenotype xenotype = CustomFactionXenotypes.GetCurrentXenotype();
-                if (faction.def.IsMutant())
+                CustomXenotype xenotype = faction.def.GetCustomXenotype();
+                if (xenotype == null && faction.def.IsMutant())
                 {
-                    if (xenotype == null)
-                    {
-                        xenotype = new CustomXenotype();
-                        xenotype.inheritable = true;
-                        xenotype.genes = new List<GeneDef>();
-                        XenotypeRandomizer.XenotypeRandomizer.Randomize(xenotype.genes, ref xenotype.iconDef, false);
-                        xenotype.name = GeneUtility.GenerateXenotypeNameFromGenes(xenotype.genes);
-                    }
-                    FactionXenotypeRandomizer.Current.factionXenotypes[faction] = xenotype;
+                    xenotype = new CustomXenotype();
+                    xenotype.inheritable = true;
+                    xenotype.genes = new List<GeneDef>();
+                    XenotypeRandomizer.XenotypeRandomizer.Randomize(xenotype.genes, ref xenotype.iconDef, false);
+                    xenotype.name = GeneUtility.GenerateXenotypeNameFromGenes(xenotype.genes);
+                    faction.SetCustomXenotype(xenotype);
                 }
             }
-        }
-    }
-
-    [HarmonyPatch(typeof(FactionGenerator))]
-    [HarmonyPatch(nameof(FactionGenerator.GenerateFactionsIntoWorld))]
-    public static class Patch_FactionGenerator_GenerateFactionsIntoWorld
-    {
-        public static void Prefix()
-        {
-            CustomFactionXenotypes.ResetIndex();
         }
     }
 

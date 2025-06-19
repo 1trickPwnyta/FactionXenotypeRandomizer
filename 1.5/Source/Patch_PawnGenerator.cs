@@ -16,7 +16,7 @@ namespace FactionXenotypeRandomizer
                 {
                     request.ForcedXenotype = XenotypeDefOf.Baseliner;
                 }
-                request.ForcedCustomXenotype = FactionXenotypeRandomizer.Current.factionXenotypes[request.Faction];
+                request.ForcedCustomXenotype = request.Faction.def.GetCustomXenotype();
             }
         }
     }

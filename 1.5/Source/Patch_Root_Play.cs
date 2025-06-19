@@ -9,7 +9,7 @@ namespace FactionXenotypeRandomizer
     {
         public static void Prefix()
         {
-            CustomFactionXenotypes.Initialize(0);
+            CustomFactionXenotypes.Initialize();
         }
     }
 }

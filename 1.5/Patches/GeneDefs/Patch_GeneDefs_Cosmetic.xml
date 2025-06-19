@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="Furskin"]</xpath>
+		<value>
+			<li Class="FactionXenotypeRandomizer.GeneDefModExtension">
+				<combatPowerFactor>1.01</combatPowerFactor>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="Tail_Furry"]</xpath>
+		<value>
+			<li Class="FactionXenotypeRandomizer.GeneDefModExtension">
+				<combatPowerFactor>1.01</combatPowerFactor>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="Tail_Smooth"]</xpath>
+		<value>
+			<li Class="FactionXenotypeRandomizer.GeneDefModExtension">
+				<combatPowerFactor>1.02</combatPowerFactor>
+			</li>
+		</value>
+	</Operation>
+</Patch>
