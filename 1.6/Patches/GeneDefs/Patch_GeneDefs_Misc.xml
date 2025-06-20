@@ -56,4 +56,12 @@
 			</li>
 		</value>
 	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="WebbedPhalanges"]</xpath>
+		<value>
+			<li Class="FactionXenotypeRandomizer.GeneDefModExtension">
+				<combatPowerFactor>1.05</combatPowerFactor>
+			</li>
+		</value>
+	</Operation>
 </Patch>
