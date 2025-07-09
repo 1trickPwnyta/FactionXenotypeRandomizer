@@ -64,6 +64,7 @@
     <Compile Include="FactionXenotypeRandomizerInitializer.cs" />
     <Compile Include="FactionXenotypeRandomizerSettings.cs" />
     <Compile Include="GeneDefModExtension.cs" />
+    <Compile Include="Patch_Object.cs" />
     <Compile Include="Patch_Faction.cs" />
     <Compile Include="Patch_FactionDef.cs" />
     <Compile Include="Patch_FactionGenerator.cs" />

@@ -9,7 +9,7 @@ namespace FactionXenotypeRandomizer
         private FactionDef parent;
         public CustomXenotype customXenotype;
 
-        public CustomFactionDef() { }
+        private CustomFactionDef() { }
 
         public CustomFactionDef(FactionDef parent)
         {
@@ -36,7 +36,7 @@ namespace FactionXenotypeRandomizer
             }
         }
 
-        public override bool Equals(object obj) => base.Equals(obj) || obj == parent;
+        public override bool Equals(object obj) => obj == this || obj == parent;
 
         public override int GetHashCode() => parent.GetHashCode();
     }

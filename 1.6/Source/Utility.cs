@@ -21,7 +21,7 @@ namespace FactionXenotypeRandomizer
 
         public static FactionDef GetPossibleCustomFactionDef(FactionDef def)
         {
-            return def.displayInFactionSelection ? new CustomFactionDef(def) : def;
+            return !(def is CustomFactionDef) && def.IsMutant() ? new CustomFactionDef(def) : def;
         }
 
         public static CustomXenotype GetCustomXenotype(this FactionDef def)
@@ -36,10 +36,11 @@ namespace FactionXenotypeRandomizer
 
         public static void SetCustomXenotype(this Faction faction, CustomXenotype xenotype)
         {
-            faction.def = new CustomFactionDef(faction.def)
+            if (!(faction.def is CustomFactionDef))
             {
-                customXenotype = xenotype
-            };
+                faction.def = new CustomFactionDef(faction.def);
+            }
+            (faction.def as CustomFactionDef).customXenotype = xenotype;
         }
 
         public static void SetCustomXenotype(this PawnGenOptionWithXenotype option, CustomXenotype xenotype)
