@@ -14,15 +14,9 @@ namespace FactionXenotypeRandomizer
         {
             if (!faction.IsPlayer && faction.def.displayInFactionSelection)
             {
-                CustomXenotype xenotype = faction.def.GetCustomXenotype();
-                if (xenotype == null && faction.def.IsMutant())
+                if (faction.def is CustomFactionDef customDef)
                 {
-                    xenotype = new CustomXenotype();
-                    xenotype.inheritable = true;
-                    xenotype.genes = new List<GeneDef>();
-                    XenotypeRandomizer.XenotypeRandomizer.Randomize(xenotype.genes, ref xenotype.iconDef, false);
-                    xenotype.name = GeneUtility.GenerateXenotypeNameFromGenes(xenotype.genes);
-                    faction.SetCustomXenotype(xenotype);
+                    customDef.SetFactionXenotype(faction);
                 }
             }
         }

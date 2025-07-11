@@ -1,5 +1,8 @@
 ﻿using RimWorld;
+using System;
+using System.Collections.Generic;
 using System.Reflection;
+using UnityEngine;
 using Verse;
 
 namespace FactionXenotypeRandomizer
@@ -8,6 +11,7 @@ namespace FactionXenotypeRandomizer
     {
         private FactionDef parent;
         public CustomXenotype customXenotype;
+        public CustomFactionOption option;
 
         private CustomFactionDef() { }
 
@@ -15,6 +19,32 @@ namespace FactionXenotypeRandomizer
         {
             this.parent = parent;
             PostLoad();
+        }
+
+        public string OptionName => option == CustomFactionOption.CustomXenotype ? customXenotype.name : option.GetLabel();
+
+        public Texture2D OptionIcon => option == CustomFactionOption.CustomXenotype ? customXenotype.iconDef.Icon : option.GetIcon();
+
+        public void SetFactionXenotype(Faction faction)
+        {
+            CustomXenotype xenotype;
+            switch (option)
+            {
+                case CustomFactionOption.RandomMutant:
+                    xenotype = new CustomXenotype();
+                    xenotype.inheritable = true;
+                    xenotype.genes = new List<GeneDef>();
+                    XenotypeRandomizer.XenotypeRandomizer.Randomize(xenotype.genes, ref xenotype.iconDef, false);
+                    xenotype.name = GeneUtility.GenerateXenotypeNameFromGenes(xenotype.genes);
+                    break;
+                case CustomFactionOption.RandomXenotype:
+                    Utility.CustomXenotypes.TryRandomElement(out xenotype);
+                    break;
+                case CustomFactionOption.CustomXenotype:
+                    return;
+                default: throw new Exception("Invalid custom faction option: " + option);
+            }
+            faction.SetCustomXenotype(xenotype);
         }
 
         public override void PostLoad()

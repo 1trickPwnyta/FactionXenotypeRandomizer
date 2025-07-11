@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using HarmonyLib;
+using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,6 +9,8 @@ namespace FactionXenotypeRandomizer
     {
         private static Dictionary<PawnGenOptionWithXenotype, CustomXenotype> pawnGenOptionCustomXenotypes = new Dictionary<PawnGenOptionWithXenotype, CustomXenotype>();
         public static FactionDef lastFactionDef;
+
+        public static List<CustomXenotype> CustomXenotypes => typeof(CharacterCardUtility).PropertyGetter("CustomXenotypes").Invoke(null, new object[] { }) as List<CustomXenotype>;
 
         public static bool IsMutant(this FactionDef def)
         {

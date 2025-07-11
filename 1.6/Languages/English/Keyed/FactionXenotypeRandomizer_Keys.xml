@@ -4,4 +4,5 @@
 	<FactionXenotypeRandomizer_AllowMixedXenotypesDesc>Whether to allow mutant faction members to occasionally generate with their mutant xenotype mixed with another standard xenotype.</FactionXenotypeRandomizer_AllowMixedXenotypesDesc>
 	<FactionXenotypeRandomizer_FactionXenotype>Faction xenotype: {0}</FactionXenotypeRandomizer_FactionXenotype>
 	<FactionXenotypeRandomizer_RandomMutant>Randomly generated mutant</FactionXenotypeRandomizer_RandomMutant>
+	<FactionXenotypeRandomizer_RandomXenotype>Random custom xenotype</FactionXenotypeRandomizer_RandomXenotype>
 </LanguageData>

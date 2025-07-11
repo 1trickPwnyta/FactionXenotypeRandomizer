@@ -52,13 +52,14 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="XenotypeRandomizer">
-      <HintPath>..\..\..\..\Published\XenotypeRandomizer\1.5\Assemblies\XenotypeRandomizer.dll</HintPath>
+      <HintPath>..\..\..\XenotypeRandomizer\1.6\Assemblies\XenotypeRandomizer.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompatibilityPatch_HugsLib_QuickstartController.cs" />
     <Compile Include="CustomFactionDef.cs" />
+    <Compile Include="CustomFactionOption.cs" />
     <Compile Include="CustomFactionXenotypes.cs" />
     <Compile Include="Debug.cs" />
     <Compile Include="FactionXenotypeRandomizerInitializer.cs" />
