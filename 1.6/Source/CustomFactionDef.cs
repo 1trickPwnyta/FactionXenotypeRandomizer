@@ -59,6 +59,7 @@ namespace FactionXenotypeRandomizer
         public void ExposeData()
         {
             Scribe_Defs.Look(ref parent, "parent");
+            Scribe_Values.Look(ref option, "option");
             Scribe_Deep.Look(ref customXenotype, "customXenotype");
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
