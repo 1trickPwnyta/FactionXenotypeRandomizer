@@ -37,7 +37,11 @@ namespace FactionXenotypeRandomizer
                         {
                             customDef.option = CustomFactionOption.RandomMutant;
                             customDef.customXenotype = null;
-                        }, CustomFactionOption.RandomMutant.GetIcon(), Color.white)).ToList()));
+                        }, CustomFactionOption.RandomMutant.GetIcon(), Color.white))
+                        .Append(new FloatMenuOption("XenotypeEditor".Translate() + "...", () =>
+                        {
+                            Find.WindowStack.Add(new Dialog_CreateXenotype(-1, null));
+                        })).ToList()));
                     }
                 }
             }
