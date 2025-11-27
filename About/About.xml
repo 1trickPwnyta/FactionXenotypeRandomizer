@@ -15,6 +15,7 @@ You can now also use your custom xenotypes as the xenotype for a mutant faction!
 ________________________________________________
 
 <size=18px><color=#5aa9d6>Updates</color></size>
+11/27/2025: Add link to xenotype editor in mutant faction menu
 11/07/2025: Add support for 1trickPwnyta's Defaults
 07/10/2025: Add option to use randomly selected custom xenotype as mutant faction xenotype
 07/09/2025: Fix bug where multiple single-selection factions could be selected in the world settings, add compatibility with 1trickPwnyta's Defaults default reward preferences
